@@ -10,6 +10,7 @@ class ParserTestCase(unittest.TestCase):
         self.assertEqual(parse_phone_number("Осыларды сатамын. Тел 8 747 313 44 55"), 77473134455)
         self.assertEqual(parse_phone_number("Жер орын сатылады. Тел 747 313 44 55"), 77473134455)
         self.assertEqual(parse_phone_number("SSD диск сатылады. Тел +7(747)313-44-55. Жақсы жағдайда"), 77473134455)
+        self.assertEqual(parse_phone_number("SSD диск сатылады. Тел  Жақсы жағдайда"), None)
 
 
 if __name__ == "__main__":
